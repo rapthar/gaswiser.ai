@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { AaaGasPrice } from '../lib/types.js';
 
-const SONNET = 'claude-sonnet-4-6';
+const OPUS = 'claude-opus-4-7';
 
 export interface PriceScoutInput {
   stateCode: string;
@@ -56,7 +56,7 @@ export async function scoutPrices(
 
   try {
     const response = await client.messages.create({
-      model: SONNET,
+      model: OPUS,
       max_tokens: 256,
       system: SYSTEM,
       messages: [{ role: 'user', content: JSON.stringify(payload) }],

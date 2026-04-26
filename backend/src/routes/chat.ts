@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { query, queryOne } from '../lib/db.js';
 import type { FuelPlan, PlanChat } from '../lib/types.js';
 
-const SONNET = 'claude-sonnet-4-6';
+const OPUS = 'claude-opus-4-7';
 
 const ChatSchema = z.object({
   plan_id: z.string().uuid(),
@@ -72,7 +72,7 @@ Keep responses concise and helpful.`.trim();
     let fullResponse = '';
 
     const stream = await fastify.ai.messages.stream({
-      model: SONNET,
+      model: OPUS,
       max_tokens: 1024,
       system: planContext,
       messages,

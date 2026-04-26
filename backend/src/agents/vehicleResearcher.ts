@@ -1,6 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 
-const SONNET = 'claude-sonnet-4-6';
+const OPUS = 'claude-opus-4-7';
 
 export interface VehicleResearchResult {
   make: string;
@@ -53,7 +53,7 @@ export async function researchVehicle(
 
   try {
     const response = await client.messages.create({
-      model: SONNET,
+      model: OPUS,
       max_tokens: 512,
       system: SYSTEM,
       messages: [{ role: 'user', content: `Research fuel economy data for: ${query}` }],

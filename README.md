@@ -16,7 +16,7 @@ Repo: https://github.com/rapthar/gaswiser.ai
 
 ## Tech stack
 
-- **Backend:** Fastify, TypeScript, Supabase (Postgres + Auth), Anthropic SDK (Claude Opus 4.7 for route optimization, Claude Sonnet 4.6 for other agents), Mapbox (directions + geocoding).
+- **Backend:** Fastify, TypeScript, Supabase (Postgres + Auth), Anthropic SDK (Claude Opus 4.7 across all agents — route optimization, fuel coach, price prediction, chat), Mapbox (directions + geocoding).
 - **Web:** Next.js 14, React, Tailwind, Leaflet (maps), Supabase JS client.
 - **Mobile:** Expo SDK 52, Expo Router 4, React Query v5, React Native Maps.
 - **Tooling:** Turborepo + pnpm workspaces.

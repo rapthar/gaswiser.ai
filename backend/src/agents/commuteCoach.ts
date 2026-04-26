@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { AaaGasPrice } from '../lib/types.js';
 
-const SONNET = 'claude-sonnet-4-6';
+const OPUS = 'claude-opus-4-7';
 
 export interface CommuteCoachOutput {
   best_day: string;
@@ -39,7 +39,7 @@ Respond ONLY with valid JSON:
 
   try {
     const response = await client.messages.create({
-      model: SONNET,
+      model: OPUS,
       max_tokens: 256,
       system: SYSTEM,
       messages: [{ role: 'user', content: JSON.stringify(payload) }],
