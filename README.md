@@ -83,4 +83,4 @@ pnpm backend      # backend only
 
 ## License
 
-Private — all rights reserved.
+[MIT](LICENSE) — free to use, modify, and distribute. See `LICENSE` for the full text.
