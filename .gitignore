@@ -27,6 +27,9 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Claude local settings (may contain credentials in allow rules)
+.claude/
+
 # Expo / React Native
 .expo/
 .expo-shared/
