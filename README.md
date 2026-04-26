@@ -16,7 +16,14 @@ Repo: https://github.com/rapthar/gaswiser.ai
 
 ## Tech stack
 
-- **Backend:** Fastify, TypeScript, Supabase (Postgres + Auth), Anthropic SDK (Claude Opus 4.7 across all agents — route optimization, fuel coach, price prediction, chat), Mapbox (directions + geocoding).
+- **Backend:** Fastify, TypeScript, Supabase (Postgres + Auth), Anthropic SDK, Mapbox (directions + geocoding).
+- **AI:** Claude Opus 4.7 powers every agent in the system:
+  - `routeOptimizer` — picks the cheapest fuel stops along a multi-leg route.
+  - `priceScout` — predicts where local gas prices are heading.
+  - `commuteCoach` — recommends the best day/time to fill up for a given commute.
+  - `vehicleResearcher` — fills in MPG/trim data for user vehicles.
+  - `stationAdvisor` — generates per-station "why fill up here" advice.
+  - `chat` — streams plan-aware Q&A in the dashboard.
 - **Web:** Next.js 14, React, Tailwind, Leaflet (maps), Supabase JS client.
 - **Mobile:** Expo SDK 52, Expo Router 4, React Query v5, React Native Maps.
 - **Tooling:** Turborepo + pnpm workspaces.
