@@ -1,0 +1,97 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --primary: 213 100% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --ring: 213 100% 33%;
+    --radius: 0.625rem;
+    --sidebar: 222 47% 11%;
+    --sidebar-foreground: 213 20% 85%;
+    --sidebar-active: 213 100% 33%;
+    --sidebar-active-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; box-sizing: border-box; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-jost), system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4 { @apply tracking-tight; }
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+  }
+  .card-shadow-md {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  }
+  .card-shadow-hover {
+    box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.10), 0 4px 6px -2px rgb(0 0 0 / 0.06);
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(213 100% 33%) 0%, hsl(213 100% 26%) 100%);
+  }
+  .gradient-subtle {
+    background: linear-gradient(135deg, hsl(213 100% 99%) 0%, hsl(220 14% 97%) 100%);
+  }
+  .text-balance { text-wrap: balance; }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+}
+
+/* Leaflet */
+.leaflet-container { width: 100%; height: 100%; border-radius: 0; }
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.leaflet-control-zoom a {
+  background-color: white !important;
+  color: #374151 !important;
+  border: none !important;
+  border-bottom: 1px solid #f3f4f6 !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  border: 1px solid #e5e7eb !important;
+}
+.leaflet-popup-tip { background: white !important; }
+
+/* Price pin markers */
+.price-pin-cheap  { background: #16a34a; }
+.price-pin-mid    { background: #d97706; }
+.price-pin-high   { background: #dc2626; }
